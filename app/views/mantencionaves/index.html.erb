@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mantencionaves</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Hora</th>
+      <th>Observacion</th>
+      <th>Condicion</th>
+      <th>Afecta</th>
+      <th>Area</th>
+      <th>Sector</th>
+      <th>Equipo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mantencionaves.each do |mantencionafe| %>
+      <tr>
+        <td><%= mantencionafe.fecha %></td>
+        <td><%= mantencionafe.hora %></td>
+        <td><%= mantencionafe.observacion %></td>
+        <td><%= mantencionafe.condicion %></td>
+        <td><%= mantencionafe.afecta %></td>
+        <td><%= mantencionafe.area %></td>
+        <td><%= mantencionafe.sector %></td>
+        <td><%= mantencionafe.equipo %></td>
+        <td><%= link_to 'Show', mantencionafe %></td>
+        <td><%= link_to 'Edit', edit_mantencionafe_path(mantencionafe) %></td>
+        <td><%= link_to 'Destroy', mantencionafe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mantencionafe', new_mantencionafe_path %>
