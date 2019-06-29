@@ -21,6 +21,8 @@ gem 'jquery-rails'
 gem 'simple_form', '~> 4.1'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 
+gem 'rails_admin', '~> 1.4', '>= 1.4.2'
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
