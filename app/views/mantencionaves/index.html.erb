@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Mantencionaves</h1>
+<h1>Listado de averias de Mantenciónes</h1>
 
 <table>
   <thead>
@@ -28,9 +28,9 @@
         <td><%= mantencionafe.area %></td>
         <td><%= mantencionafe.sector %></td>
         <td><%= mantencionafe.equipo %></td>
-        <td><%= link_to 'Show', mantencionafe %></td>
-        <td><%= link_to 'Edit', edit_mantencionafe_path(mantencionafe) %></td>
-        <td><%= link_to 'Destroy', mantencionafe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'ver', mantencionafe %></td>
+        <td><%= link_to 'Editar', edit_mantencionafe_path(mantencionafe) %></td>
+        <td><%= link_to 'Borrar', mantencionafe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
