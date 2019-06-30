@@ -27,17 +27,17 @@
 
 <p>
   <strong>Area:</strong>
-  <%= @mantencionafe.area %>
+  <%= @mantencionafe.area.name %>
 </p>
 
 <p>
   <strong>Sector:</strong>
-  <%= @mantencionafe.sector %>
+  <%= @mantencionafe.sector.name %>
 </p>
 
 <p>
   <strong>Equipo:</strong>
-  <%= @mantencionafe.equipo %>
+  <%= @mantencionafe.equipo.name %>
 </p>
 
 <%= link_to 'Edit', edit_mantencionafe_path(@mantencionafe) %> |

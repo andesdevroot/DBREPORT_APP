@@ -25,8 +25,8 @@
         <td><%= mantencionafe.observacion %></td>
         <td><%= mantencionafe.condicion %></td>
         <td><%= mantencionafe.afecta %></td>
-        <td><%= mantencionafe.area %></td>
-        <td><%= mantencionafe.sector %></td>
+        <td><%= mantencionafe.area.name %></td>
+        <td><%= mantencionafe.sector%></td>
         <td><%= mantencionafe.equipo %></td>
         <td><%= link_to 'ver', mantencionafe %></td>
         <td><%= link_to 'Editar', edit_mantencionafe_path(mantencionafe) %></td>
@@ -38,4 +38,4 @@
 
 <br>
 
-<%= link_to 'New Mantencionafe', new_mantencionafe_path %>
+<%= link_to 'Crear nueva Averia', new_mantencionafe_path %>

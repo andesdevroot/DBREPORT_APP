@@ -23,6 +23,18 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
 
+  config.model 'Mantencionave' do
+    label "Mantencion avería" 
+    label_plural "Mantención averías"
+  end
+
+  config.model 'Sector' do
+    label "Sector" 
+    label_plural "Sectores"
+  end
+
+
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
