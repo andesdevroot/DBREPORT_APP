@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_28_231402) do
+ActiveRecord::Schema.define(version: 2019_07_01_133321) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,38 @@ ActiveRecord::Schema.define(version: 2019_06_28_231402) do
     t.index ["sector_id"], name: "index_mantencionaves_on_sector_id"
   end
 
+  create_table "mantencioncorrectivas", force: :cascade do |t|
+    t.date "fecha"
+    t.time "hora_inicio"
+    t.string "hora_final"
+    t.string "especialidad"
+    t.text "observacion"
+    t.bigint "area_id"
+    t.bigint "sector_id"
+    t.bigint "equipo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_mantencioncorrectivas_on_area_id"
+    t.index ["equipo_id"], name: "index_mantencioncorrectivas_on_equipo_id"
+    t.index ["sector_id"], name: "index_mantencioncorrectivas_on_sector_id"
+  end
+
+  create_table "mantenciondesviacions", force: :cascade do |t|
+    t.date "fecha"
+    t.time "hora_inicio"
+    t.string "hora_termino"
+    t.string "tratamiento"
+    t.string "afecta"
+    t.bigint "area_id"
+    t.bigint "sector_id"
+    t.bigint "equipos_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_mantenciondesviacions_on_area_id"
+    t.index ["equipos_id"], name: "index_mantenciondesviacions_on_equipos_id"
+    t.index ["sector_id"], name: "index_mantenciondesviacions_on_sector_id"
+  end
+
   create_table "sectors", force: :cascade do |t|
     t.string "sector"
     t.datetime "created_at", null: false
@@ -64,4 +96,10 @@ ActiveRecord::Schema.define(version: 2019_06_28_231402) do
   add_foreign_key "mantencionaves", "areas"
   add_foreign_key "mantencionaves", "equipos"
   add_foreign_key "mantencionaves", "sectors"
+  add_foreign_key "mantencioncorrectivas", "areas"
+  add_foreign_key "mantencioncorrectivas", "equipos"
+  add_foreign_key "mantencioncorrectivas", "sectors"
+  add_foreign_key "mantenciondesviacions", "areas"
+  add_foreign_key "mantenciondesviacions", "equipos", column: "equipos_id"
+  add_foreign_key "mantenciondesviacions", "sectors"
 end

@@ -25,7 +25,7 @@ RailsAdmin.config do |config|
 
   config.model 'Mantencionave' do
     label "Mantencion avería" 
-    label_plural "Mantención averías"
+    label_plural "Mantención Averías"
   end
 
   config.model 'Sector' do
@@ -37,6 +37,18 @@ RailsAdmin.config do |config|
     label "Usuario" 
     label_plural "Usuarios"
   end
+  config.model 'Mantencioncorrectiva' do
+    label "Mantencion Correctiva" 
+    label_plural "Mantenciones Correctivas"
+  end
+
+
+  config.model 'Mantenciondesviacion' do
+    label "Mantencion Desvicacion" 
+    label_plural "Mantenciones Desviacion"
+  end
+
+
 
 
   config.actions do

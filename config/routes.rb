@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :mantenciondesviacions
+  resources :mantencioncorrectivas
   get 'pages/info'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users

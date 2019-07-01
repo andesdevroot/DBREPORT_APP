@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha: 2019-07-01
+  hora_inicio: 2019-07-01 09:33:21
+  hora_termino: MyString
+  tratamiento: MyString
+  afecta: MyString
+  area: one
+  sector: one
+  equipos: one
+
+two:
+  fecha: 2019-07-01
+  hora_inicio: 2019-07-01 09:33:21
+  hora_termino: MyString
+  tratamiento: MyString
+  afecta: MyString
+  area: two
+  sector: two
+  equipos: two

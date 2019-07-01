@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mantenciondesviacions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Hora inicio</th>
+      <th>Hora termino</th>
+      <th>Tratamiento</th>
+      <th>Afecta</th>
+      <th>Area</th>
+      <th>Sector</th>
+      <th>Equipos</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mantenciondesviacions.each do |mantenciondesviacion| %>
+      <tr>
+        <td><%= mantenciondesviacion.fecha %></td>
+        <td><%= mantenciondesviacion.hora_inicio %></td>
+        <td><%= mantenciondesviacion.hora_termino %></td>
+        <td><%= mantenciondesviacion.tratamiento %></td>
+        <td><%= mantenciondesviacion.afecta %></td>
+        <td><%= mantenciondesviacion.area %></td>
+        <td><%= mantenciondesviacion.sector %></td>
+        <td><%= mantenciondesviacion.equipos %></td>
+        <td><%= link_to 'Show', mantenciondesviacion %></td>
+        <td><%= link_to 'Edit', edit_mantenciondesviacion_path(mantenciondesviacion) %></td>
+        <td><%= link_to 'Destroy', mantenciondesviacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mantenciondesviacion', new_mantenciondesviacion_path %>
