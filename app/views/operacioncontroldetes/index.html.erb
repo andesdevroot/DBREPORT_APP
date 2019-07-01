@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Operacioncontroldetes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Hora inicio</th>
+      <th>Hora final</th>
+      <th>Especialidad</th>
+      <th>Observacion</th>
+      <th>Area</th>
+      <th>Sector</th>
+      <th>Equipo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @operacioncontroldetes.each do |operacioncontroldete| %>
+      <tr>
+        <td><%= operacioncontroldete.fecha %></td>
+        <td><%= operacioncontroldete.hora_inicio %></td>
+        <td><%= operacioncontroldete.hora_final %></td>
+        <td><%= operacioncontroldete.especialidad %></td>
+        <td><%= operacioncontroldete.observacion %></td>
+        <td><%= operacioncontroldete.area %></td>
+        <td><%= operacioncontroldete.sector %></td>
+        <td><%= operacioncontroldete.equipo %></td>
+        <td><%= link_to 'Show', operacioncontroldete %></td>
+        <td><%= link_to 'Edit', edit_operacioncontroldete_path(operacioncontroldete) %></td>
+        <td><%= link_to 'Destroy', operacioncontroldete, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Operacioncontroldete', new_operacioncontroldete_path %>

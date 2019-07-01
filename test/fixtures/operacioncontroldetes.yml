@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha: 2019-07-01
+  hora_inicio: 2019-07-01 10:38:53
+  hora_final: MyString
+  especialidad: MyString
+  observacion: MyText
+  area: one
+  sector: one
+  equipo: one
+
+two:
+  fecha: 2019-07-01
+  hora_inicio: 2019-07-01 10:38:53
+  hora_final: MyString
+  especialidad: MyString
+  observacion: MyText
+  area: two
+  sector: two
+  equipo: two

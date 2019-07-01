@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_01_133321) do
+ActiveRecord::Schema.define(version: 2019_07_01_143853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,38 @@ ActiveRecord::Schema.define(version: 2019_07_01_133321) do
     t.index ["sector_id"], name: "index_mantenciondesviacions_on_sector_id"
   end
 
+  create_table "operacioncontroldetes", force: :cascade do |t|
+    t.date "fecha"
+    t.time "hora_inicio"
+    t.string "hora_final"
+    t.string "especialidad"
+    t.text "observacion"
+    t.bigint "area_id"
+    t.bigint "sector_id"
+    t.bigint "equipo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_operacioncontroldetes_on_area_id"
+    t.index ["equipo_id"], name: "index_operacioncontroldetes_on_equipo_id"
+    t.index ["sector_id"], name: "index_operacioncontroldetes_on_sector_id"
+  end
+
+  create_table "operecionesaveris", force: :cascade do |t|
+    t.date "fecha"
+    t.time "hora_averia"
+    t.text "observacion"
+    t.string "condicion"
+    t.string "afecta"
+    t.bigint "area_id"
+    t.bigint "sector_id"
+    t.bigint "equipo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_operecionesaveris_on_area_id"
+    t.index ["equipo_id"], name: "index_operecionesaveris_on_equipo_id"
+    t.index ["sector_id"], name: "index_operecionesaveris_on_sector_id"
+  end
+
   create_table "sectors", force: :cascade do |t|
     t.string "sector"
     t.datetime "created_at", null: false
@@ -102,4 +134,10 @@ ActiveRecord::Schema.define(version: 2019_07_01_133321) do
   add_foreign_key "mantenciondesviacions", "areas"
   add_foreign_key "mantenciondesviacions", "equipos", column: "equipos_id"
   add_foreign_key "mantenciondesviacions", "sectors"
+  add_foreign_key "operacioncontroldetes", "areas"
+  add_foreign_key "operacioncontroldetes", "equipos"
+  add_foreign_key "operacioncontroldetes", "sectors"
+  add_foreign_key "operecionesaveris", "areas"
+  add_foreign_key "operecionesaveris", "equipos"
+  add_foreign_key "operecionesaveris", "sectors"
 end

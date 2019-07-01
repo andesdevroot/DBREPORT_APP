@@ -45,10 +45,19 @@ RailsAdmin.config do |config|
 
   config.model 'Mantenciondesviacion' do
     label "Mantencion Desvicacion" 
-    label_plural "Mantenciones Desviacion"
+    label_plural "Mantenciones Desviaciones"
   end
 
 
+  config.model 'Operecionesaveri' do
+    label "Operación avería " 
+    label_plural "Operación averías "
+  end
+
+  config.model 'Operacioncontroldete' do
+    label "Operación control" 
+    label_plural "Operaciones control  "
+  end
 
 
   config.actions do

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :operacioncontroldetes
+  resources :operecionesaveris
   resources :mantenciondesviacions
   resources :mantencioncorrectivas
   get 'pages/info'

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Operecionesaveris</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Hora averia</th>
+      <th>Observacion</th>
+      <th>Condicion</th>
+      <th>Afecta</th>
+      <th>Area</th>
+      <th>Sector</th>
+      <th>Equipo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @operecionesaveris.each do |operecionesaveri| %>
+      <tr>
+        <td><%= operecionesaveri.fecha %></td>
+        <td><%= operecionesaveri.hora_averia %></td>
+        <td><%= operecionesaveri.observacion %></td>
+        <td><%= operecionesaveri.condicion %></td>
+        <td><%= operecionesaveri.afecta %></td>
+        <td><%= operecionesaveri.area %></td>
+        <td><%= operecionesaveri.sector %></td>
+        <td><%= operecionesaveri.equipo %></td>
+        <td><%= link_to 'Show', operecionesaveri %></td>
+        <td><%= link_to 'Edit', edit_operecionesaveri_path(operecionesaveri) %></td>
+        <td><%= link_to 'Destroy', operecionesaveri, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Operecionesaveri', new_operecionesaveri_path %>
