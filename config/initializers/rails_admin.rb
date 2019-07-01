@@ -33,6 +33,10 @@ RailsAdmin.config do |config|
     label_plural "Sectores"
   end
 
+  config.model 'User' do
+    label "Usuario" 
+    label_plural "Usuarios"
+  end
 
 
   config.actions do
