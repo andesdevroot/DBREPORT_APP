@@ -56,8 +56,14 @@ RailsAdmin.config do |config|
 
   config.model 'Operacioncontroldete' do
     label "Operación control" 
-    label_plural "Operaciones control  "
+    label_plural "Operaciones control detención "
   end
+
+  config.model 'Operadesviaprodu' do
+    label "Operacione desviacion producción" 
+    label_plural "Operaraciones desviaciónes producciones "
+  end
+
 
 
   config.actions do

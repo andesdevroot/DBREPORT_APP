@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :operadesviaprodus
   resources :operacioncontroldetes
   resources :operecionesaveris
   resources :mantenciondesviacions

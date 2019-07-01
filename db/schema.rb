@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_01_143853) do
+ActiveRecord::Schema.define(version: 2019_07_01_153939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,23 @@ ActiveRecord::Schema.define(version: 2019_07_01_143853) do
     t.index ["sector_id"], name: "index_operacioncontroldetes_on_sector_id"
   end
 
+  create_table "operadesviaprodus", force: :cascade do |t|
+    t.date "fecha"
+    t.time "hora_inicio"
+    t.time "hora_termino"
+    t.string "tratamiento_promedio"
+    t.string "afecta_parcial"
+    t.string "total_proceso"
+    t.bigint "area_id"
+    t.bigint "sector_id"
+    t.bigint "equipo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_operadesviaprodus_on_area_id"
+    t.index ["equipo_id"], name: "index_operadesviaprodus_on_equipo_id"
+    t.index ["sector_id"], name: "index_operadesviaprodus_on_sector_id"
+  end
+
   create_table "operecionesaveris", force: :cascade do |t|
     t.date "fecha"
     t.time "hora_averia"
@@ -137,6 +154,9 @@ ActiveRecord::Schema.define(version: 2019_07_01_143853) do
   add_foreign_key "operacioncontroldetes", "areas"
   add_foreign_key "operacioncontroldetes", "equipos"
   add_foreign_key "operacioncontroldetes", "sectors"
+  add_foreign_key "operadesviaprodus", "areas"
+  add_foreign_key "operadesviaprodus", "equipos"
+  add_foreign_key "operadesviaprodus", "sectors"
   add_foreign_key "operecionesaveris", "areas"
   add_foreign_key "operecionesaveris", "equipos"
   add_foreign_key "operecionesaveris", "sectors"

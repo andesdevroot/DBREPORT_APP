@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Operadesviaprodus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Hora inicio</th>
+      <th>Hora termino</th>
+      <th>Tratamiento promedio</th>
+      <th>Afecta parcial</th>
+      <th>Total proceso</th>
+      <th>Area</th>
+      <th>Sector</th>
+      <th>Equipo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @operadesviaprodus.each do |operadesviaprodu| %>
+      <tr>
+        <td><%= operadesviaprodu.fecha %></td>
+        <td><%= operadesviaprodu.hora_inicio %></td>
+        <td><%= operadesviaprodu.hora_termino %></td>
+        <td><%= operadesviaprodu.tratamiento_promedio %></td>
+        <td><%= operadesviaprodu.afecta_parcial %></td>
+        <td><%= operadesviaprodu.total_proceso %></td>
+        <td><%= operadesviaprodu.area %></td>
+        <td><%= operadesviaprodu.sector %></td>
+        <td><%= operadesviaprodu.equipo %></td>
+        <td><%= link_to 'Show', operadesviaprodu %></td>
+        <td><%= link_to 'Edit', edit_operadesviaprodu_path(operadesviaprodu) %></td>
+        <td><%= link_to 'Destroy', operadesviaprodu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Operadesviaprodu', new_operadesviaprodu_path %>

@@ -1,0 +1,21 @@
+
+<%= simple_form_for(@operadesviaprodu) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :fecha %>
+    <%= f.input :hora_inicio %>
+    <%= f.input :hora_termino %>
+    <%= f.input :tratamiento_promedio %>
+    <%= f.input :afecta_parcial %>
+    <%= f.input :total_proceso %>
+    <%= f.association :area %>
+    <%= f.association :sector %>
+    <%= f.association :equipo %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
