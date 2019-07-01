@@ -55,8 +55,8 @@ en:
     table_headers:
       model_name: "Actividad"
       last_created: "Ultimo creado"
-      records: "Records"
-      username: "Userio"
+      records: "Registro"
+      username: "Usuario"
       changes: "Cambios"
       created_at: "Fecha/hora"
       item: "Item"
