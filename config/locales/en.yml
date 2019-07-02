@@ -112,7 +112,7 @@ en:
         breadcrumb: "Historico"
       history_show:
         title: "Historico por%{model_label} '%{object_label}'"
-        menu: "Historrico"
+        menu: "Historico"
         breadcrumb: "Historico"
     form:
       cancel: "Cancelar"
