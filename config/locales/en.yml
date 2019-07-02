@@ -54,7 +54,7 @@ en:
       object_not_found: "%{model} con id '%{id}' no encontrada"
     table_headers:
       model_name: "Actividad"
-      last_created: "Ultimo creado"
+      last_created: "Ultima actividad"
       records: "Registro"
       username: "Usuario"
       changes: "Cambios"
