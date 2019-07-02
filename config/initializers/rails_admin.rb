@@ -24,7 +24,7 @@ RailsAdmin.config do |config|
   # config.show_gravatar = true
 
   config.model 'Mantencionave' do
-    label "Mantencion avería" 
+    label "Mantención avería" 
     label_plural "Mantención Averías"
   end
 
@@ -38,30 +38,30 @@ RailsAdmin.config do |config|
     label_plural "Usuarios"
   end
   config.model 'Mantencioncorrectiva' do
-    label "Mantencion Correctiva" 
-    label_plural "Mantenciones Correctivas"
+    label "Mantención Correctiva" 
+    label_plural "Mantención C"
   end
 
 
   config.model 'Mantenciondesviacion' do
-    label "Mantencion Desvicacion" 
-    label_plural "Mantenciones Desviaciones"
+    label "Mantención Desvicacion" 
+    label_plural "Mantención D"
   end
 
 
   config.model 'Operecionesaveri' do
     label "Operación avería " 
-    label_plural "Operación averías "
+    label_plural "Operación Averías "
   end
 
   config.model 'Operacioncontroldete' do
     label "Operación control" 
-    label_plural "Operaciones control detención "
+    label_plural "Operaciones C/D "
   end
 
   config.model 'Operadesviaprodu' do
     label "Operacione desviacion producción" 
-    label_plural "Operaraciones desviaciónes producciones "
+    label_plural "Operaciones D/P "
   end
 
 
